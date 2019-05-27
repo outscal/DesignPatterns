@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ObjectPooling
+namespace SingletonPattern
 {
     public class BulletSpawner : MonoBehaviour
     {
@@ -16,8 +16,6 @@ namespace ObjectPooling
                 instance = this;
             else
                 Destroy(gameObject);
-
-            DontDestroyOnLoad(gameObject);
         }
 
         public GameObject SpawnBullet()
